@@ -746,7 +746,7 @@ body {
 
 .markdown-section h2 {
     font-size: 1.75rem;
-    margin: 45px 0 .8rem
+    margin: 65px 0 .8rem
 }
 
 .markdown-section h3 {
@@ -755,7 +755,8 @@ body {
 }
 
 .markdown-section h4 {
-    font-size: 1.25rem
+    font-size: 1.25rem;
+    margin-top:50px;
 }
 
 .markdown-section h5 {

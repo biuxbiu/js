@@ -160,12 +160,71 @@ var num = undefined - true;        //NaN   =>  算术运算
 ```
 
 #### 自增与自减
-`x++` 自加一。
-```
-var num = 0;
-for(var i=0;i<10;i++>){
-}
-```
+
+|方法|说明|代码|解析|
+|:---:|:---:|:---:|:---:|
+|++|自增一|x=y++|会先输出 y 再自增|
+|++|自增一|x=++y|先自增在输出 y|
+|--|自减一|x=y--|会先输出 y 再自减|
+|--|自减一|x=--y|先自减在输出 y|
 
 
 ## 比较运算符
+在逻辑语句中使用比较运算符来比较两个`变量`或两个`值`之间的大小，结果返回 `true` 和 `false`。
+
+假如 `var x = 0`;
+
+|运算符|描述|比较|返回值|
+|:---:|:---:|:---:|:---:|
+|==|等于|x=='0'|true|
+|==|等于|x==1|false|
+|===|全等于|x===0|true|
+|===|全等于|x==='0'|false|
+|!=|不等于|x!=1|true|
+|!=|不等于|x!=0|false|
+|!==|不全等于|x!=='0'|true|
+|!==|不全等于|x!==0|false|
+|<|小于|x<0|true|
+|>|大于|x>0|false|
+|>=|大于等于|x>=0|true|
+|>=|大于等于|x>='0'|true|
+|<=|小于等于|x<=0|true|
+|<=|小于等于|x<='0'|true|
+
+
+## 逻辑运算符
+逻辑运算符，也称为`布尔运算符`，因为它比较后会输出`true`或者`false`。
+
+假如`var x = 5`,`var y = 10`
+
+|运算符|描述|比较|返回值|
+|:---:|:---:|:---:|:---:|
+|&&|并且|x>5&&y>=10|true|
+|\|\||或者|x>5||y>=10|true|
+|!|或者|取反||!(x>y)|true|
+
+#### 三元运算
+
+```
+condition ? functionOne() : functionTwo();
+```
+判断条件是否成立('?'前面为判断条件)<Br>
+`true`执行`functionOne()`<Br>
+`false`执行`functionTwo()`
+
+引用逻辑运算符的例子我们可以写出三元运算如下
+```
+x>y ? console.log('true') : console.log('false');
+```
+如果 x>y 条件成立(condition)，返回`true`执行`console.log('true')`<Br>
+如果 x>y 条件不成立(condition)，返回`false`执行`console.log('false')`
+
+
+## 字符串运算符
+实则为两个字符串拼接。
+
+```
+var firstName = 'biu'; 
+var lastName = 'chan'; 
+var student = firstName + lastName;     //两个字符串相加为拼接
+```
