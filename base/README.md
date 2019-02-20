@@ -208,7 +208,7 @@ var num = undefined - true;        //NaN   =>  算术运算
 ```
 condition ? functionOne() : functionTwo();
 ```
-判断条件是否成立('?'前面为判断条件)<Br>
+`condition` 判断条件是否成立<Br>
 `true`执行`functionOne()`<Br>
 `false`执行`functionTwo()`
 
