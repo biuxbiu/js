@@ -106,7 +106,7 @@ var num = 1 - x;     //-9   =>  算术运算
 ```
 var num = 1 + undefined;     //NaN  =>  算术运算
 ```
-* 数字与`字符串的undefined`相加为`拼接`。
+* 数字与`字符串的 undefined`相加为`拼接`。
 ```
 var num = 10 + 'undefined'       //'10undefined'    =>  字符串拼接
 ```

@@ -1,4 +1,7 @@
-* [基础概念](base/#Javascript)
+<img class="logo" src="img/logo.png" />
+<!-- <img class="logo" src="img/javascript.jpg" /> -->
+
+* [基础概念 ](base/#Javascript)
     * [- 变量](base/README#变量)
     * [- 数据类型](base/README#数据类型)
     * [- 算数运算符](base/README#算数运算符)
