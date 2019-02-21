@@ -89,7 +89,7 @@ switch(date){
         console.log('星期日')
 }
 ```
->不需要默认操作的话，`default`可以删除。
+>不需要默认操作的话，`default` 可以删除。
 
 ## for-循环
 循环可以将代码执行到制定的次数。如果你希望遍历（一次次的执行同样的代码），那么你可以使用循环。
@@ -106,18 +106,18 @@ for(statement 1;statement 2;statement 3){
 `statement 3 `    //设置条件;<br>
 
 
-比如说我们想打印`1`到`10`。
+比如说我们想打印 `1` 到 `10` 。
 ```
 for(var i=1;i<=10;i++){
     console.log(i);
 }
 ```
 
-`var i=1;`     //从`1`开始;<br>
+`var i=1;`     //从 `1` 开始;<br>
 `i<=10;`        //循环次数小于或者等于10;<br>
-`i++;`          //每次循环`i`加`1`;<br>
+`i++;`          //每次循环 `i` 加 `1` ;<br>
 
->如果想打印`0`到`10`的话，则`statement 1`处需要设置`var i=0;`
+>如果想打印 `0` 到 `10` 的话，则 `statement 1` 处需要设置 `var i=0;` 
 
 使用`for 循环`打印一组水果。
 
@@ -127,8 +127,96 @@ for(var i=0;i<=fruits.length;i++){
     console.log(fruits[i]);
 }
 ```
->数组第一位是`0`，数量永远比索引（第几个）大一。<br>
-比如这个数组一共有`5`种水果，草莓的索引值是`4`。
+>数组第一位是 `0` ，数量永远比索引（第几个）大一。<br>
+比如这个数组一共有 `5` 种水果，草莓的索引值是 `4` 。
 
 ## while-和do-while-循环
-循环可以将代码执行到制定的次数。如果你希望遍历（一次次的执行同样的代码），那么你可以使用循环。
+
+
+#### while 循环
+只有制定条件成立（为 `true` ）的时候才会执行对应的代码块。<br>不成立（为 `false` ）的时候会跳过 `while` 循环。
+
+语法:
+```
+while(condition){       
+    //需要执行的代码            //只有当`condition`成立的时候，对应的代码才会执行
+}
+```
+举个例子：
+```
+var student = 'peter';
+while(student=='peter'){
+    console.log('He is peter');     //student == 'peter' 成立，执行代码
+}
+```
+
+`while` 也适用在循环当中。
+下面这个例子打印 `1` 到 `5` 。
+```
+var x = 0;
+while(x<5){
+    console.log(x);     
+    x++;        //每次`x`的值自增`1`;
+}
+```
+
+
+#### do while 循环
+`do while` 循环是 `while` 循环的另一种形态。<br>
+`do while` 循环会在判断条件是否为 `true` 之前执行一次。然后再去检查条件是否为 `true` ，条件如果为 `true` 则会重复这个循环。
+
+语法：
+```
+do{
+    //需要执行的代码
+}while(condition);
+```
+
+同样是 `while` 的例子，我们用 `do while` 来做一下：
+```
+var x= 0;
+do{
+    console.log(x);
+    x++;
+}while(x<5);
+
+```
+
+>注意：`do while` 与 `while` 的区别是， `do while` 至少会执行一次。
+
+举个例子：
+```
+var x = 1;
+while(x<1){
+    console.log(x);     //条件不成立，代码不执行。
+}
+```
+
+```
+var x = 1;
+do{
+    console.log(x);     //先执行一次。
+}while(x<1)
+```
+
+## break-continue-语句 
+`break` 语句用于跳出循环。
+```
+for(var i=0;i<=5;i++){
+    if(i==3){
+        break;      //在循环的过程当中，`i==3` 成立的时候，循环被终止。
+    }
+    console.log(i);     //`0`,`1`,`2`。
+}
+```
+
+`countinue` 语句用于跳过循环中的一个迭代（意思是跳过这一次循环，继续下一次循环）。
+```
+for(var i=0;i<=5;i++){
+    if(i==3){
+        continue;
+    }
+    console.log(i);     //`0`,`1`,`2`,'4',`5`。
+}
+```
+
