@@ -812,16 +812,16 @@ body {
 
 .markdown-section code {
     border-radius: 2px;
-    /* color: #e96900; */
+    color: #e96900;
     /* color: #42b983; */
-    color: #fff;
-    background: #42b983;
+    /* color: #fff; */
+    /* background: #42b983; */
     font-size: .8rem;
     margin: 0 2px;
     padding: 3px 5px;
     white-space: pre-wrap;
 }
-
+/* 
 .markdown-section code{
     background-color: #42b983;
     font-family: Roboto Mono, Monaco, courier, monospace
@@ -829,6 +829,11 @@ body {
 .markdown-section pre {
     background-color: #f8f8f8;
     font-family: Roboto Mono, Monaco, courier, monospace;
+} */
+
+.markdown-section code, .markdown-section pre{
+    background-color: #f8f8f8;
+        font-family: Roboto Mono,Monaco,courier,monospace;
 }
 
 .markdown-section pre {
