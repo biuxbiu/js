@@ -1,5 +1,6 @@
-<img class="logo" src="img/logo.png" />
-<!-- <img class="logo" src="img/javascript.jpg" /> -->
+<!-- <img class="logo" src="img/logo.png" /> -->
+<img class="logo" src="img/javascript.jpg" />
+
 
 * [基础概念 ](base/#Javascript)
     * [- 变量](base/README#变量)
