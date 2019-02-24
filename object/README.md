@@ -1,7 +1,7 @@
 # 对象
 `Javascript` 中，万物皆对象：`字符串`，`数值`，`数组`，`函数`。。。
 
-#### Javascript 中的内建对象
+#### Javascript-对象
 对象只是带有属性和方法的特殊数据类型。
 *   `布尔类型`可以是一个对象
 *   `数字类型`可以是一个对象
@@ -141,3 +141,136 @@ function student(name,age,sexy){
 var boy = new student('peter','12','man');
 ```
 >使用函数构造对象的时候，一般使用 `new` 关键字生成一个新的对象
+
+## 对象初始化
+对象初始化的三张方式：
+
+#### 对象初始化器方式
+对象初始化器方式一共有三种：`new`， `对象直接量` ，`Object.create()`
+
+#### new 方法
+语法：
+```
+function objectName(parameters1,parameters2,parametersx...){
+    this.property1 = parameters1,
+    this.property2 = parameters2,
+    this.propertyx = parametersx,
+}
+
+var name1 = new  objectName(parameters1,parameters2,parametersx);
+var name2 = new  objectName(parameters1,parameters2,parametersx);
+```
+
+举个例子：
+
+```
+function student(name,age,sexy){
+    this.name = name,
+    this.age = age,
+    this.sexy = sexy,
+}
+
+var boy = new student('peter',12,'boy');
+var girl = new student('sue',11,'girl');
+```
+
+#### 对象直接量方法
+语法：
+```
+var objectName = {
+    property1:value1, 
+    property2:value2,…, 
+    propertyN:valueN
+}
+
+objectName.property1 = newValue1;           //通过 `.` 方法可以改变属性值，或者新增属性和属性值。
+```
+>`property` 是对象的属性。<Br>
+`value` 是对象的属性值。<Br>
+`value` 可以是 `数字`，`字符串`，`对象` 三者之一。
+
+例如：
+```
+var student = {
+    name : 'peter',
+    age : 12,                           //`数字`
+    sexy : 'man',                       //`字符串`
+    getHobby : {                        //`对象`
+        sprots : 'backetball',          
+        game : '王者荣耀'
+    },
+    getName : function(){               //`函数`
+        return this.name;
+    }
+}
+
+student.age = 14;                       //通过 `.` 方法修改属性值
+//或者
+student['age'] = 14;                    //通过 `字符串` 方法修改属性值
+
+student.school = 'ABD Schoole';         //通过 `.` 方法新增 `school` 属性和对应的属性值 `ABD Schoole`
+//或者
+studen['school'] = 'ABD Schoole';       //通过 `字符串` 方法新增 `school` 属性和对应的属性值 `ABD Schoole`
+```
+
+#### Object.create() 方法
+```
+var objectName = {
+    property1:value1, 
+    property2:value2,…, 
+    propertyN:valueN
+}
+
+var name1 = Object.create(objectName);
+```
+
+举个例子：
+```
+var student = {
+    name : 'peter',
+    age : 12,
+    sexy : 'boy'
+}
+
+var boy = Object.create(student);       //通过 `Object.create` 实例化一个对象
+boy.name = 'ken';                       //通过 `点` 方法修改属性值
+//或者
+boy['name'] = 'ken';                    //通过 `字符串` 方法修改属性值
+```
+
+>上面的例子中，要修改或者新增对象中的属性和属性值，则可以直接使用 `.` 或者  `['属性值']`方法进行操作。<br>
+在对象的属性里有一个地方需要注意下：`prototype` 和 `__proto__` 。这两个详细区别后续我们会单独讲到<br>
+`prototype` 是函数的内置属性。<Br>
+`__proto__` 是对象的内置属性。<Br>
+
+## 对象添加方法
+第一种：
+```
+function student(){
+    this.name = 'peter',
+    this.age = 12,
+    this.sexy = 'boy',
+    this.getName = function getName(){      //内部直接定义 `getName()` 函数
+        console.log(this.name);
+    };
+}
+
+var boy = new student();
+boy.getName();
+```
+方法可以直接写在对象中，也可以通过外部调用：
+```
+function getName(){             //外部定义 `getName()` 函数
+    console.log(this.name);
+}
+
+function student(){
+    this.name = 'peter',
+    this.age = 12,
+    this.xesy = 'man',
+    this.getName = getName;     //内部调用
+} 
+
+var boy = new student();
+boy.getName();
+```

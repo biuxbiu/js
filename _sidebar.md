@@ -26,7 +26,7 @@
     * [- Javascript 对象](object/#Javascript-对象)
     * [- 对象构造器](object/#对象构造器)
     * [- 对象初始化](object/#对象初始化)
-    * [- 添加方法](object/#添加方法)
+    * [- 添加方法](object/#对象添加方法)
 * [核心对象](coreObject/README.md)
     * [- Arrays 对象](base/if.md)
     * [- 其他方式创建数组](base/else.md)
