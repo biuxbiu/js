@@ -1,12 +1,12 @@
 <!-- <img class="logo" src="img/logo.png" /> -->
 
 * [基础概念 ](base/#Javascript)
-    * [- 变量](base/README#变量)
-    * [- 数据类型](base/README#数据类型)
-    * [- 算数运算符](base/README#算数运算符)
-    * [- 比较运算符](base/README#比较运算符)
-    * [- 逻辑运算符](base/README#逻辑运算符)
-    * [- 字符串运算符](base/README#字符串运算符)
+    * [- 变量](base/#变量)
+    * [- 数据类型](base/#数据类型)
+    * [- 算数运算符](base/#算数运算符)
+    * [- 比较运算符](base/#比较运算符)
+    * [- 逻辑运算符](base/#逻辑运算符)
+    * [- 字符串运算符](base/#字符串运算符)
 * [条件和循环](condition/#条件和循环)
     * [- if else语句](condition/#if-else语句)
     * [- else if 语句](condition/#else-if语句)
