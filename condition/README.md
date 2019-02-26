@@ -4,7 +4,7 @@
 
 ## if-else语句
 语法：
-```
+```copy
 if(condition){              //判断条件是否为'true'
     //条件为 'true' 的时候执行的代码
 }else{
@@ -13,7 +13,7 @@ if(condition){              //判断条件是否为'true'
 ```
 `condition`返回结果只有两个，`true`或者`false`。
 返回结果执行代码相对应的代码块。
-```
+```copy
 var student = 'peter';
 if(student=='peter'){        //返回'true'    => 判断 student 的变量的值为 'peter'
     console.log('true')      //条件为 'true' 的时候执行的代码
@@ -24,7 +24,7 @@ if(student=='peter'){        //返回'true'    => 判断 student 的变量的值
 
 ## else-if语句
 如果第一个条件为`false`,则会指定一个新的条件。
-```
+```copy
 var student = 'peter';
 if(student=='Anne'){           //初始条件
     console.log('Anne')        //初始条件 'true' 的时候执行的代码
@@ -37,7 +37,7 @@ if(student=='Anne'){           //初始条件
 根据不同的结果执行不同的操作。
 
 语法：
-```
+```copy
 switch(n){
     case 1:
         //结果为 1 的时候执行的代码
@@ -50,7 +50,7 @@ switch(n){
 }
 ```
 举个例子
-```
+```copy
 var x = 3;
 switch(x){
     case 1:
@@ -64,7 +64,7 @@ switch(x){
 }
 ```
 利用 `switch` 得出今天是星期几。
-```
+```copy
 var date = new Date().getDay();     //获取今天的日期;
 switch(date){
     case 1:
@@ -95,7 +95,7 @@ switch(date){
 循环可以将代码执行到制定的次数。如果你希望遍历（一次次的执行同样的代码），那么你可以使用循环。
 
 语法：
-```
+```copy
 for(statement 1;statement 2;statement 3){
     //需要一次次执行的代码
 }
@@ -107,7 +107,7 @@ for(statement 1;statement 2;statement 3){
 
 
 比如说我们想打印 `1` 到 `10` 。
-```
+```copy
 for(var i=1;i<=10;i++){
     console.log(i);
 }
@@ -121,7 +121,7 @@ for(var i=1;i<=10;i++){
 
 使用`for 循环`打印一组水果。
 
-```
+```copy
 var fruits = ['苹果','梨','西瓜','荔枝','草莓'];
 for(var i=0;i<=fruits.length;i++){
     console.log(fruits[i]);
@@ -137,13 +137,13 @@ for(var i=0;i<=fruits.length;i++){
 只有制定条件成立（为 `true` ）的时候才会执行对应的代码块。<br>不成立（为 `false` ）的时候会跳过 `while` 循环。
 
 语法:
-```
+```copy
 while(condition){       
     //需要执行的代码            //只有当`condition`成立的时候，对应的代码才会执行
 }
 ```
 举个例子：
-```
+```copy
 var student = 'peter';
 while(student=='peter'){
     console.log('He is peter');     //student == 'peter' 成立，执行代码
@@ -152,7 +152,7 @@ while(student=='peter'){
 
 `while` 也适用在循环当中。
 下面这个例子打印 `1` 到 `5` 。
-```
+```copy
 var x = 0;
 while(x<5){
     console.log(x);     
@@ -166,14 +166,14 @@ while(x<5){
 `do while` 循环会在判断条件是否为 `true` 之前执行一次。然后再去检查条件是否为 `true` ，条件如果为 `true` 则会重复这个循环。
 
 语法：
-```
+```copy
 do{
     //需要执行的代码
 }while(condition);
 ```
 
 同样是 `while` 的例子，我们用 `do while` 来做一下：
-```
+```copy
 var x= 0;
 do{
     console.log(x);
@@ -185,14 +185,14 @@ do{
 >注意：`do while` 与 `while` 的区别是， `do while` 至少会执行一次。
 
 举个例子：
-```
+```copy
 var x = 1;
 while(x<1){
     console.log(x);     //条件不成立，代码不执行。
 }
 ```
 
-```
+```copy
 var x = 1;
 do{
     console.log(x);     //先执行一次。
@@ -201,7 +201,7 @@ do{
 
 ## break-continue-语句 
 `break` 语句用于跳出循环。
-```
+```copy
 for(var i=0;i<=5;i++){
     if(i==3){
         break;      //在循环的过程当中，`i==3` 成立的时候，循环被终止。
@@ -211,7 +211,7 @@ for(var i=0;i<=5;i++){
 ```
 
 `countinue` 语句用于跳过循环中的一个迭代（意思是跳过这一次循环，继续下一次循环）。
-```
+```copy
 for(var i=0;i<=5;i++){
     if(i==3){
         continue;

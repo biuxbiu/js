@@ -19,12 +19,12 @@ Peter 和 peter 是两个不同的变量。
 
 #### 数字 number
 数据类型，可以带小数点，也可以不带。
-```
+```copy
 var x = 34.00;      //有小数点
 var x = 34;         //没有小数点
 ```
 极大极小都可以通过科学技术方体现。
-```
+```copy
 var y = 123e5;      //123*10的五次方 12300000
 var y = 123e-5;     //123除以10的五次方 0.00123
 ```
@@ -32,17 +32,17 @@ var y = 123e-5;     //123除以10的五次方 0.00123
 #### 字符串 string
 字符串是存储字符的变量，字符串是引号中的任意文本。
 可以使用`单引号`或者`双引号`
-```
+```copy
 var name = 'peter';     //使用单引号
 var name = "peter";     //使用双引号
 ```
 单引号里面可以有双引号，双引号里面可以有单引号。
-```
+```copy
 var name = 'He is "peter"'      //He is "peter"
 var name = "He is 'peter'"      //He is 'peter'
 ```
 单（双）引号里面有单（双）引号需要转义。
-```
+```copy
 var name = 'He is \'peter\''        //He is 'peter'
 ```
 
@@ -61,7 +61,7 @@ var name = 'He is \'peter\''        //He is 'peter'
 
 #### 布尔 boolean
 布尔类型只能有两个值，`true` 和 `false`。
-```
+```copy
 var x = true;
 var y = false;
 ```
@@ -85,50 +85,50 @@ var y = false;
 
 #### 数字与其他类型中的运算
 * 数字类型中，加法表示两个数的和。
-```
+```copy
 var num = 2 + 3;        //5    =>  算术运算
 ```
 * 数字与`变量`相加，为算数运算。
-```
+```copy
 var x = 10;     //变量
 var num = x + 2 + 3;        //15    =>  算术运算
 ```
 * 数字与`字符串`相加为`拼接`效果，输出`字符串`。
-```
+```copy
 var num = 1 + '10' ;     //'110'     =>  字符串拼接
 ```
 * 数字与`字符串`相减为算数运算，输出数字。
-```
+```copy
 var x = '10';        //字符串
 var num = 1 - x;     //-9   =>  算术运算
 ```
 * 数字与`undefined`相加输出 `NaN`。
-```
+```copy
 var num = 1 + undefined;     //NaN  =>  算术运算
 ```
 * 数字与`字符串的 undefined`相加为`拼接`。
-```
+```copy
 var num = 10 + 'undefined'       //'10undefined'    =>  字符串拼接
 ```
 * 数字与`null`相加减为算数运算。
-```
+```copy
 var num = 10 + null;       //10 null => 0（数字运算）
 var num = 10 - null;       //10 null => 0（数字运算）
 ```
 
 #### 字符串与其他数据类型之间的运算
 * 字符串与`undefined`相加减，要注意`+`和`-`的输出结果不一样。
-```
+```copy
 var num  = '123' + undefined;       //'123undefined'    =>  字符串拼接
 var num  = '123' - undefined;       //NaN   =>  数字运算
 ```
 * 字符串与`null`相加减
-```
+```copy
 var num = '123' + null;     //'123null' =>  字符串拼接
 var num = '123' - null;     //123   =>  算术运算
 ```
 * 字符串与`boolean`相加减
-```
+```copy
 var num = '123' + false;     //'123false' =>  字符串拼接
 var num = '123' - false;     //123   =>  算术运算
 var num = '123' + true;     //'123true' =>  字符串拼接
@@ -138,12 +138,12 @@ var num = '123' - true;     //122   =>  算术运算
 
 #### null与其他数据类型之间的运算
 * null与`undefined`相加减。
-```
+```copy
 var num = null + undefined;       //NaN   =>  算术运算
 var num = null - undefined;       //NaN   =>  算术运算
 ```
 * null与`boolean`相加减。
-```
+```copy
 var num = null + false;       //0  =>  算术运算
 var num = null - false;       //0   =>  算术运算
 var num = null + true;       //1    =>  算术运算
@@ -152,7 +152,7 @@ var num = null - true;       //-1   =>  算术运算
 
 #### undefined与其他数据类型之间的运算
 * undefined与`boolean`相加减。
-```
+```copy
 var num = undefined + false;        //NaN   =>  算术运算
 var num = undefined - false;        //NaN   =>  算术运算
 var num = undefined + true;        //NaN   =>  算术运算
@@ -207,7 +207,7 @@ var num = undefined - true;        //NaN   =>  算术运算
 
 #### 三元运算
 
-```
+```copy
 condition ? functionOne() : functionTwo();
 ```
 `condition` 判断条件是否成立，成立返回`true`,不成立返回`false`<Br>
@@ -215,7 +215,7 @@ condition ? functionOne() : functionTwo();
 `false`执行`functionTwo()`
 
 引用逻辑运算符的例子我们可以写出三元运算如下
-```
+```copy
 x>y ? console.log('true') : console.log('false');
 ```
 如果 x>y 条件成立(condition)，返回`true`执行`console.log('true')`<Br>
@@ -225,7 +225,7 @@ x>y ? console.log('true') : console.log('false');
 ## 字符串运算符
 实则为两个字符串拼接。
 
-```
+```copy
 var firstName = 'biu'; 
 var lastName = 'chan'; 
 var student = firstName + lastName;     //两个字符串相加为拼接
