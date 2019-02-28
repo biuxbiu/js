@@ -234,6 +234,11 @@ main.hidden {
 
 .anchor span {
     color: #34495e
+    /* color: #ffffff */
+}
+
+#javascript-junior-level span{
+    color: #ffffff
 }
 
 .anchor:hover {
@@ -639,7 +644,8 @@ section.cover h1 small {
 
 section.cover blockquote {
     font-size: 1.5rem;
-    text-align: center
+    text-align: center;
+    color: #fff;
 }
 
 section.cover ul {
@@ -647,7 +653,8 @@ section.cover ul {
     list-style-type: none;
     margin: 1em auto;
     max-width: 500px;
-    padding: 0
+    padding: 0;
+    color: #fff;
 }
 
 section.cover .cover-main>p:last-child a {
