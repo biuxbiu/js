@@ -677,12 +677,13 @@ section.cover .cover-main>p:last-child a:last-child {
 }
 
 section.cover .cover-main>p:last-child a:last-child:hover {
-    color: inherit;
-    opacity: .8
+    color: #42b983;
+    background: #fff;
 }
 
 section.cover .cover-main>p:last-child a:hover {
-    color: inherit
+    color: #42b983;
+    background: #fff;
 }
 
 section.cover blockquote>p>a {
