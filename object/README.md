@@ -11,7 +11,7 @@
 *   `数组`也可以是一个对象<br>
 *   等等
 
-```
+```copy
 var student = {
     name : 'peter',
     age : '20',
@@ -30,7 +30,7 @@ var student = {
 我们可以有两种方式访问对象的属性值。
 
 语法：
-```
+```copy
 objectName.propertyName
 //又或者
 objectName['propertyName']
@@ -38,7 +38,7 @@ objectName['propertyName']
 
 比如我们要访问 `student` 的 `name` 的值：
 
-```
+```copy
 var student = {
     name : ' peter',
     age : '12',
@@ -52,7 +52,7 @@ student['name']
 
 >`Javascript` 中内置了长度属性用来计算属性或者字符串的长度（字符数）。
 
-```
+```copy
 console.log(student.name.length);       //length 属性获取该属性的属性值长度。
 console.log(student['name'].length);
 ```
@@ -131,7 +131,7 @@ console.log(student['name'].length);
 
 ## 对象构造器
 我们使用一个函数来构造一个对象
-```
+```copy
 function student(name,age,sexy){
     this.name = name,
     this.age = age,
@@ -150,7 +150,7 @@ var boy = new student('peter','12','man');
 
 #### new 方法
 语法：
-```
+```copy
 function objectName(parameters1,parameters2,parametersx...){
     this.property1 = parameters1,
     this.property2 = parameters2,
@@ -163,7 +163,7 @@ var name2 = new  objectName(parameters1,parameters2,parametersx);
 
 举个例子：
 
-```
+```copy
 function student(name,age,sexy){
     this.name = name,
     this.age = age,
@@ -176,7 +176,7 @@ var girl = new student('sue',11,'girl');
 
 #### 对象直接量方法
 语法：
-```
+```copy
 var objectName = {
     property1:value1, 
     property2:value2,…, 
@@ -190,7 +190,7 @@ objectName.property1 = newValue1;           //通过 `.` 方法可以改变属�
 `value` 可以是 `数字`，`字符串`，`对象` 三者之一。
 
 例如：
-```
+```copy
 var student = {
     name : 'peter',
     age : 12,                           //`数字`
@@ -214,7 +214,7 @@ studen['school'] = 'ABD Schoole';       //通过 `字符串` 方法新增 `schoo
 ```
 
 #### Object.create() 方法
-```
+```copy
 var objectName = {
     property1:value1, 
     property2:value2,…, 
@@ -225,7 +225,7 @@ var name1 = Object.create(objectName);
 ```
 
 举个例子：
-```
+```copy
 var student = {
     name : 'peter',
     age : 12,
@@ -245,7 +245,7 @@ boy['name'] = 'ken';                    //通过 `字符串` 方法修改属性�
 
 ## 对象添加方法
 第一种：
-```
+```copy
 function student(){
     this.name = 'peter',
     this.age = 12,
@@ -258,8 +258,10 @@ function student(){
 var boy = new student();
 boy.getName();
 ```
+
+
 方法可以直接写在对象中，也可以通过外部调用：
-```
+```copy
 function getName(){             //外部定义 `getName()` 函数
     console.log(this.name);
 }

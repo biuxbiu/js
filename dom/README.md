@@ -1,4 +1,4 @@
-# HTML-DOM
+# Dom-Event
 通过 HTML DOM，可访问 JavaScript HTML 文档的所有元素。
 
 ## 什么是-DOM
@@ -34,17 +34,196 @@ document.getElementByClassName(name);
 
 通过 `tag` 找元素：
 ```copy
+<script>
 document.getElementByTagName(tag);
+</script>
 ```
 
 实例：
 ```copy
+<script>
 document.getElementById('demo');
-
-document.getElementByClass('demo');
-
-document.getElementByTagName('div')
+document.getElementsByClass('demo');
+document.getElementsByTagName('div');
+</script>
 ```
 
 ## 改变属性
 !>回顾一下，只有对象才有方法和属性。
+
+通过选择元素后，我们可以改变该元素的属性。
+
+改变 `img` 的 `src` 属性实例：
+```copy
+<img src="https://vuejs.org/images/logo.png" />;
+
+<script>
+var dom = document.getElementsByTagName('img');
+dom.src = 'https://developer.mozilla.org/static/img/web-docs-sprite.22a6a085cf14.svg';
+</script>
+```
+
+改变 `a` 链接的 `href` 属性实例：
+```copy
+<a href="https://www.baidu.com/"></a>
+
+<script>
+var dom = document.getElementsByTagName('a');
+dom.src = 'https://www.taobao.com/'；
+</script>
+```
+
+改变 `div` 链接的 `style` 属性实例：
+```copy
+var dom = document.getElementsByTagName('div');
+dom.style.backgroundColor = '#000';
+```
+
+!>你不能在属性中使用 `-` 符号，需要以大驼峰的写法（复合词的字母需要大写），比如说 `backgroundColor`。
+
+## 添加-移除-替换元素
+
+#### 添加元素
+`dom.cloneNode()`：克隆元素并返回结果节点。<Br>
+`document.createElement(element)`：创建一个新的元素。<Br>
+`document.createTextNode(text)`：创建一个新的文本节点。<Br>
+
+```copy
+<script>
+document.createElement('div');
+document.createTextNod('hello world');
+</script>
+```
+
+!>是不是很奇怪我们并没有在文档中找到以上方法创建的元素。<br>
+当你用 `document.createTextNode(text)` 的时候，它不会出现在文档中，你必须添加来放到文档中。
+
+```copy
+<script>
+var dom = document.getElementsByTagName('div')[0];
+var domClone = dom.cloneNode();
+document.body.append(domClone);
+</script>
+```
+
+!>`cloneNode()` 和 `cloneNode(true)` 是不一样的。<br>
+`cloneNode()` 并不是 `深度` 复制，它只是复制这个对应的节点，而不会复制子节点。<br>
+`cloneNode(true)` 是 `深度` 复制，它复制的是对应的节点已经该节点下面的所有子节点。
+
+```copy
+<script>
+var dom = document.createTextNode('hello wold');
+document.body.append(dom);      //直接放入到 `body` 中
+document.getElementsById('content').appendChild(dom)      //直接放入到 `content` id中的最末尾
+document.getElementsById('content').insertBefore(dom,node)      //直接放入到 `content` id中,并且放在 `node` 节点前面。
+</script>
+```
+
+#### 移除元素
+`dom.removeChild(node)`：父级节点移除子级节点
+
+要删除元素，你必须先找到该元素的父级元素，再通过父级元素使用 `removeChild(node)` 的方法来删除该元素。
+
+>我们可以使用 `node.parentNode` 属性来找到该元素的父级元素。
+
+删除 `p` 元素实例：
+```copy
+<script>
+var dom = document.getElementsTagName('p')[0];
+dom.parentNode.removeChild(dom);
+</script>
+```
+
+#### 替换元素
+`dom.replaceChild(newNode,oldNode)`：父级元素替换新的子级元素。
+
+把 `p` 节点替换成 `div` 节点实例：
+```copy
+var oldNode = document.getElementsByTagName('p')[0];
+var newNode = document.getElementsByTagName('div')[0];
+var dom = oldNode.parentNode;
+dom.replaceChild(newNode,oldNode);
+```
+
+
+## 创建动画
+`Javascript` 里创建动画，我们可以使用 `setInterval` 方法来执行。
+
+>`Javascript` 里面创建动画有很多种，在性能优化上有很多更好的方案。在这里先从基本的开始认识 `Javascript` 的动画。
+
+
+#### setInterval
+#### setInterva
+`setInterval` 允许我们创建一个定时器，并调用这个定时器反复执行一段代码块。
+
+
+语法：
+```copy
+<script>
+var job = setInterval(fun,500)
+</script>
+```
+
+红色盒子向右边移动，移动5px后停止的动画实例：
+```copy
+<script>
+var left = 0;
+var box = document.getElementById('box');
+function move(){
+    left += 1;
+    box.style.left = left + 'px';
+    if(left == 5){
+        clearInterval(animation);
+    }
+}
+var animation = setInterval(move,500);
+</script>
+```
+
+>`clearInterval()` 是用来取消掉 `setInterval()` 设置的 `timeout`。<br>
+`clearInterval()` 的参数必须是 `setInterval()` 设置的 `id`，如例子中的 `animation`。
+
+## Events
+`Javascript` 中有很多事件让我们在交互编程的时候更加方便。
+
+|事件|描述|
+|:--|:--|
+|onabort|图像在加载时被中断|
+|onblur|元素焦点的时候|
+|onchange|内容被改变|
+|onclick|点击某个对象|
+|ondbclick|双击某个对象|
+|onerror|记载文档或图像发生错误|
+|onfocus|获得焦点|
+|onkeydown|某个按键按下|
+|onkeyup|某个按键松开|
+|onkeypress|某个按键按下并且松开|
+|onload|某个资源完成加载|
+|onmousedown|鼠标按钮按下|
+|onmousemove|鼠标移动|
+|onmouseout|鼠标从某个元素一开|
+|onmouseover|鼠标移到某个元素上|
+|onmouseup|鼠标按键被松开|
+|onreset|重置按钮被点击|
+|onresize|窗口框架被重新调整大小|
+|onselect|文本被选中|
+|onsubmit|确认按钮被点击|
+|onunload|用户退出页面|
+
+语法：
+```copy
+document.addEventListener('click',function(){
+    alert('1');
+})
+```
+
+>判断用户是否关闭本页面可以用 `onunload` 事件。<br>
+判断用户是否切换了页面可以使用 `visibilitychange` 事件。
+
+```copy
+<script>
+document.addEventListener('visibilitychange',function(){
+    alert('切换了 tab 啦');
+})
+</script>
+```
