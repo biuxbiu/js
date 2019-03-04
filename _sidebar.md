@@ -44,6 +44,8 @@
     * [- 创建动画](dom/#创建动画)
         * [- setInterval](dom/#setInterval)
     * [- Events](dom/#Events)
+        * [- addEventListener](dom/#addEventListener)
+        * [- removeEventListener](dom/#removeEventListener)
     * [- 创建图像幻灯片](dom/#创建图像幻灯片)
     * [- 表格验证](dom/#表格验证)
 

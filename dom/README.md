@@ -35,7 +35,7 @@ document.getElementByClassName(name);
 通过 `tag` 找元素：
 ```copy
 <script>
-document.getElementByTagName(tag);
+document.getElementsByTagName(tag);
 </script>
 ```
 
@@ -114,8 +114,8 @@ document.body.append(domClone);
 <script>
 var dom = document.createTextNode('hello wold');
 document.body.append(dom);      //直接放入到 `body` 中
-document.getElementsById('content').appendChild(dom)      //直接放入到 `content` id中的最末尾
-document.getElementsById('content').insertBefore(dom,node)      //直接放入到 `content` id中,并且放在 `node` 节点前面。
+document.getElementById('content').appendChild(dom)      //直接放入到 `content` id中的最末尾
+document.getElementById('content').insertBefore(dom,node)      //直接放入到 `content` id中,并且放在 `node` 节点前面。
 </script>
 ```
 
@@ -212,9 +212,11 @@ var animation = setInterval(move,500);
 
 语法：
 ```copy
+<script>
 document.addEventListener('click',function(){
     alert('1');
 })
+</script>
 ```
 
 >判断用户是否关闭本页面可以用 `onunload` 事件。<br>
@@ -226,4 +228,56 @@ document.addEventListener('visibilitychange',function(){
     alert('切换了 tab 啦');
 })
 </script>
+```
+
+#### addEventListener
+`addEventListener()` 添加事件监听。将事件附件到元素上面去，而不会覆盖现有的事件处理程序。意思是你可以向元素中添加多个事件处理。
+
+语法：
+```copy
+element.addEventListener(event,function,useCapture);
+```
+`event`：必须，字符串，指定事件名<br>
+`function`：必须，指定要事件触发时执行的函数<br>
+`useCapture`：可选，布尔值，指定事件是否在捕获或冒泡阶段执行
+
+!>`event` 不要使用 `on` 的前缀，例如：使用 `click` 而不使用 `onclick`
+
+
+实例：
+```copy
+<script>
+var dom = document.getElementById('content');
+dom.addEventListener('click',function(){
+    console.log('hello world')
+})
+</script>
+```
+
+单个元素多个事件：
+```copy
+<script>
+var dom = document.getElementById('content');
+dom.addEventListener('click',function(){        //点击事件
+    console.log('hello world')
+})
+dom.addEventListener('mouseover',function(){        //在元素上方事件
+    console.log('now over it');
+})
+</script>
+```
+
+#### removeEventListener
+`removeEventListener` 删除事件监听。
+
+语法：
+```copy
+element.removeEventListener(event,function,useCapture);
+```
+`event`：必须，字符串，移除的事件名<br>
+`function`：必须，要移除的函数<br>
+`useCapture`：可选，布尔值，指定移除事件句柄的阶段
+
+```copy
+
 ```
