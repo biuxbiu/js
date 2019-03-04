@@ -278,6 +278,56 @@ element.removeEventListener(event,function,useCapture);
 `function`：必须，要移除的函数<br>
 `useCapture`：可选，布尔值，指定移除事件句柄的阶段
 
-```copy
+新增监听事件后移除监听事件实例：
 
+```copy
+<script>
+var dom = document.getElementById('content');
+dom.addEventListener('click',function(){        //添加监听事件
+    console.log('1')
+})
+dom.removeEventListener('click',function(){     //删除监听事件
+    console.log('1');
+})
+</script>
 ```
+
+## 创建图像幻灯片
+代码实例：
+```copy
+<script>
+var img =[
+    'https://cdn.dribbble.com/users/59947/screenshots/6120153/flarin_dribble_loop.gif',
+    'https://cdn.dribbble.com/users/992274/screenshots/6118368/family_with_disabled_child_kit8-net.png',
+    'https://cdn.dribbble.com/users/146798/screenshots/6118950/cherries-dribbble_2x.jpg',
+    'https://cdn.dribbble.com/users/788099/screenshots/6120369/man_karate_kit8-net.png'
+];
+var imgNum = 0;
+var prev = document.getElementsByClassName('js-prev')[0];
+var next = document.getElementsByClassName('js-next')[0];
+var imgDom = document.getElementsByClassName('js-img')[0];
+
+next.addEventListener('click',function(){
+    imgNum ++;
+    if(imgNum >= img.length ){
+        imgNum = 0;
+    }
+    imgDom.src = img[imgNum];
+
+})
+
+prev.addEventListener('click',function(){
+    imgNum --;
+    if(imgNum < 0 ){
+        imgNum = img.length-1;
+    }
+    imgDom.src = img[imgNum];
+
+})
+
+</script>
+```
+<iframe height="265" style="width: 100%;" scrolling="no" title="EMgaBR" src="//codepen.io/biubiubiu/embed/EMgaBR/?height=265&theme-id=0&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/biubiubiu/pen/EMgaBR/'>EMgaBR</a> by @biu²
+  (<a href='https://codepen.io/biubiubiu'>@biubiubiu</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
