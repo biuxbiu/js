@@ -238,7 +238,7 @@ main.hidden {
 }
 
 #javascript-junior-level span{
-    color: #ffffff
+    color: #000000
 }
 
 .anchor:hover {
@@ -645,7 +645,7 @@ section.cover h1 small {
 section.cover blockquote {
     font-size: 1.5rem;
     text-align: center;
-    color: #fff;
+    color: #000;
 }
 
 section.cover ul {
@@ -654,7 +654,7 @@ section.cover ul {
     margin: 1em auto;
     max-width: 500px;
     padding: 0;
-    color: #fff;
+    color: #000;
 }
 
 section.cover .cover-main>p:last-child a {
@@ -697,8 +697,9 @@ section.cover blockquote>p>a:hover {
 
 .sidebar,
 body {
-    background-color: #fff
+    background-color: #fff ;
 }
+
 
 .sidebar {
     color: #364149

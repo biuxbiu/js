@@ -331,3 +331,28 @@ prev.addEventListener('click',function(){
   See the Pen <a href='https://codepen.io/biubiubiu/pen/EMgaBR/'>EMgaBR</a> by @biu²
   (<a href='https://codepen.io/biubiubiu'>@biubiubiu</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+
+## 表格验证
+简单的表格验证两次填入的手机号码是否正确实例：
+```copy
+<form onsubmit="return isOk()" method="post">
+    Number1:<input type="text" id="Number1" name="number1"><br>
+    Number2:<input type="text" id="Number2" name="number2"><br>
+    <input type="submit" value="submit">
+</form>
+  
+<script>
+function isOk(){
+    var number1 = document.getElementById('Number1');
+    var number2 = document.getElementById('Number2');
+
+    if(number1.value != '' && number1.value == number2.value ){
+        return true
+    }else if(number1.value == '' || number1.value != number2.value  ){
+        alert('输入有错啦');
+    }
+}
+</script>
+```
+
+>只有返回 `true` 的时候才会提交表格。

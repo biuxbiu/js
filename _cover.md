@@ -9,4 +9,4 @@
 [GitHub](#)
 [Get Started](/base/#javascript)
 
-![color](#000000)
+![color](#fff)
