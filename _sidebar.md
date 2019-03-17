@@ -1,5 +1,7 @@
 <!-- <img class="logo" src="img/logo.png" /> -->
 
+<div class="sideBarTitle">Javascript Junior Level</div>
+
 * [基础概念 ](base/#Javascript)
     * [- 变量](base/#变量)
     * [- 数据类型](base/#数据类型)
@@ -51,10 +53,16 @@
 
 
 
+<div class="MoreWay">biuxbiu Javascript Series</div>
+
+<a class="developerLogo" href="http://javascript-middle.biuxbiu.design/" target="_blank"><img src="img/javascript-middle-level.png"></a>
+
 <div class="MoreWay">More Learning Pathway</div>
 
-
 <a class="developerLogo" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank"><img src="https://developer.mozilla.org/static/img/web-docs-sprite.22a6a085cf14.svg"></a>
+
+
+<a class="developerLogo" href="https://www.javascript.com/" target="_blank"><img src="img/js-logo.png"></a>
 
 
 <div class="MoreWay">Good FrontEnd Framework</div>
