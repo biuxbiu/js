@@ -4,13 +4,41 @@ Javascaript 是交互性语言，是轻量级语言，`弱类型语言`。
 强类型语言： 不可以很简单的让变量转换成各种数据类型，称为强类型语言。比如 Java , c++ , Python
 
 ## 变量
-变量是用于存储信息的“容器”，变量的值可以在整个程序中被修改。
-```复制
-var student = 'peter'
+变量是用于存储信息的 `容器`，变量的值可以在整个程序中被修改。
+
+
+#### --声明变量--
+```copy
+var fruits;                         //通过 `var` 关键字来声明一个变量；
+var fruites , color , price;        //也可以通过 `逗号` 隔开同时声明多个变量；
+var fruits  = 'Banana';             //声明变量的同时可以给变量赋值;
+var fruits = 'Banana',              //可以一次性给多个变量赋值   ;
+    color = 'yellow' , 
+    price = '12';
+var fruits = 'Banana';              //变量重名会产生覆盖;
+var fruits = 'Apple';          
 ```
-在上面的例子，student 被赋值为 'peter'。
->注意：Javascript 中区分大小写。<Br>
-Peter 和 peter 是两个不同的变量。
+
+!>声明变量需要注意以下几种情况
+
+```copy
+var fruits;                     //声明变量但是没有赋值的时候输出 `undefined`；
+var fruits , Fruits;            //变量区分大小写， `fruits` 和 `Fruits` 是两个变量；
+var fruits , _Fruits;           //变量命名需要语义化，以 `字母或者下划线` 开始；
+var FruitsColor , fruitsColor ，fruits_color;  //变量命名最好遵循大小驼峰写法或者下划线写发；
+
+!>
+var 12b = 'text';               //杜绝数字开头的变量（Invalid or unexpected token）
+<!
+
+```
+
+#### --变量的存储和释放--
+在网页当中，浏览器都会把变量存储起来以便我们可以随时用到它。但是同时，浏览器也需要将它们释放，以免造成内存泄露页面崩溃。
+```copy
+
+```
+
 
 
 ## 数据类型
