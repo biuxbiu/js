@@ -78,6 +78,6 @@ var 1 = 'hello world'          //`1a` 变量命名不规范，导致整段 `js` 
 ```copy
 console.log('1')
 console.log('2')
-fun();                          //引用没有定义的 `function`;
+fun();                          //引用没有定义的 `fun`;
 ```
 
