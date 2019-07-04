@@ -13,10 +13,10 @@ Javascript 是交互性语言，是轻量级语言，`弱类型语言`，直译�
 
 <strong>比如说：</strong>
 ```copy
-console.log(a)              //抛出错误异常 'a is not defined' 中断执行。
-console.log(b)              //不执行
-console.log(c)              //不执行
-console.log('hello')        //不执行
+console.log(a)                      //抛出错误异常 'a is not defined' 中断执行。
+console.log(b)                      //不执行
+console.log(c)                      //不执行
+console.log('hello world')          //不执行
 ```
 
 在没有声明变量 'a,b,c' 的情况下，直接运行代码会报错 `a is not defined` ，并且中断执行。
@@ -29,13 +29,12 @@ console.log('hello')        //不执行
 
 ```copy
 try{
-    console.log(a);         //检测到异常 'a is not defined' 但是不抛出错误，位于它后面的代码不执行，直接运行 'catch' 里面的代码块
-    console.log(b);         //不执行
-    console.log(c);         //不执行
+    console.log(a);                 //检测到异常 'a is not defined' 但是不抛出错误，位于它后面的代码不执行，直接运行 'catch' 里面的代码块
+    console.log(b);                 //不执行
+    console.log(c);                 //不执行
 }catch(e){
-    console.log('hello');   //'hello'
+    console.log('hello world');     //'hello world'
 }
-console.log('world');       //'world'
 ```
 当 `try` 模块里面代码检测有异常的时候，不抛出异常，代码块内位于后面的代码不执行，执行 `catch` 代码块内的代码。
 
@@ -71,7 +70,6 @@ var 1a = 'hello world'         //`1a` 变量命名不规范，导致整段 `js` 
 var 1 = 'hello world'          //`1a` 变量命名不规范，导致整段 `js` 无法运行；
 ```
 
-<br>
 <br>
 
 <strong>Uncaught ReferenceError-引用错误</strong>
