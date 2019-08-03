@@ -3,6 +3,14 @@
 <div class="sideBarTitle">Javascript Junior Level</div>
 
 * [Javascript ](base/#Javascript)
+    * [-- 动态类型语言](base/#动态类型语言)
+    * [-- 弱类型语言](base/#弱类型语言)
+    * [-- 解释型语言](base/#解释型语言)
+    * [-- 单线程](base/#单线程)
+    * [-- 同步与异步](base/#同步与异步)
+    * [-- 三步运行](base/#三步运行)
+    * [-- 常见的错误提示](base/#常见的错误提示)
+    * [-- 总结](base/#总结)
 * [变量 ](variable/#变量)
     * [-- 声明变量](variable/#声明变量)
     * [-- 变量的存储与释放](variable/#变量的存储与释放)
