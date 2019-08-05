@@ -123,13 +123,13 @@ logName();      //Peter
 
 ###### 常见的错误提示
 `Javascript` 中，控制台大致把报错信息分为两大类：
-* `语法错误`（关于 `SyntaxError` 的这类错误导致浏览器不能正常预解析，使得这个 `js` 文件无法执行 ）；
+* `语法错误`（ `SyntaxError` 语法规则错误， `Javascript` 三步运行中的第一步不能正常的进行语法分析导致整段 `Javascript` 不能开始执行。）
 * `抛出异常`（这类错误程序会执行到问题代码后停止继续往下执行）；
 
 <br>
 <br>
 
-<strong>SyntaxError-语法解析错误</strong><br>
+<strong>SyntaxError-语法规则错误</strong><br>
 * 变量命名不规范的语法错误导致不能正常预解析，整段 js 无法运行
 
 ```copy
@@ -193,12 +193,11 @@ try{
 <br>
 
 <strong>TypeError-类型错误</strong><br>
-* `抛出异常` - 变量或者参数不是预期的类型的时候，比如 `new` 一个字符串或者调用对象不存在。
+* `抛出异常` - `new` 是构造一个函数。但是如果变量或者参数不是预期的类型的时候，比如 `new` 一个字符串或者数字等等，那都是不对的。
 
 ```copy
 var text = new 'hello world';       //"hello world" is not a constructor
 var text = new  123123;             //"hello world" is not a constructor
-var text = new  helloWorld;         //"hello world" is not a constructor
 
 var target = {};
 target.change();                    //target.change is not a function
@@ -207,7 +206,7 @@ target.change();                    //target.change is not a function
 
 
 <br>
-<strong>URIError-类型错误</strong>
+<strong>URLError-类型错误</strong>
 
 <br>
 <br>
