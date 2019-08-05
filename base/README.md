@@ -123,14 +123,14 @@ logName();      //Peter
 
 ###### 常见的错误提示
 `Javascript` 中，控制台大致把报错信息分为两大类：
-* `语法错误`（ `SyntaxError` 语法规则错误， `Javascript` 三步运行中的第一步不能正常的进行语法分析导致整段 `Javascript` 不能开始执行。）
+* `语法错误`（ `SyntaxError` 语法规则错误， 导致诊断 `Javascript` 不能正常运行。）
 * `抛出异常`（这类错误程序会执行到问题代码后停止继续往下执行）；
 
 <br>
 <br>
 
 <strong>SyntaxError-语法规则错误</strong><br>
-* 变量命名不规范的语法错误导致不能正常预解析，整段 js 无法运行
+* 主要发生在语法编写出现问题时发生，变量命名不规范的语法错误导致不能正常预解析，整段 js 无法运行
 
 ```copy
 console.log('1');
@@ -156,7 +156,7 @@ Math.max(2,4,-);               //Uncaught SyntaxError: Unexpected token )
 <br>
 
 <strong>Uncaught ReferenceError-引用错误</strong><br>
-* 引用到没有定义的变量或者函数 `抛出异常`；
+* 引用无法引用的数据时发生的错误，引用到没有定义的变量或者函数 `抛出异常`；
 
 ```copy
 console.log('1')
@@ -205,8 +205,6 @@ target.change();                    //target.change is not a function
 ```
 
 
-<br>
-<strong>URLError-类型错误</strong>
 
 <br>
 <br>
@@ -214,12 +212,19 @@ target.change();                    //target.change is not a function
 #### 总结
 * `动态类型语言`：Javascript 是一种动态类型语言，需要在运行时才能确定变量的数据类型；<br>
 * `弱类型语言`：Javascript 是一种弱类型语言，它可以随时改变变量的数据类型；<br>
-* `解释型语言`：Javascript 是一种解释型语言，改语言不需要编译，浏览器 js 引擎翻译就可以运行；<br>
+* `解释型语言`：Javascript 是一种解释型语言，浏览器 js 引擎翻译就可以运行；<br>
 * `跨平台性`：Javascript 不依赖任何操作系统，只要有浏览器就能运行。<br>
 * `单线程`：Javascript 所有任务必须排队执行。<br>
 * `三步运行`：语法分析，预编译，解析与执行<br>
 
+<br>
+<br>
+
 熟悉常见的错误提示可以让我们更加快速的定位问题。
+* `SyntaxError`-语法规则错误
+* `Uncaught ReferenceError`-引用错误
+* `RangeError`-范围错误
+* `TypeError`-类型错误
 
 
 

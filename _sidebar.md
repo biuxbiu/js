@@ -14,6 +14,7 @@
 * [变量 ](variable/#变量)
     * [-- 声明变量](variable/#声明变量)
     * [-- 变量的存储与释放](variable/#变量的存储与释放)
+    * [-- 删除变量](variable/#删除变量)
     * [-- 总结](variable/#总结)
 * [数据类型 ](dataType/#数据类型)
     * [-- 数值型](dataType/#数值型-Number)
