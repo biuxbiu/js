@@ -41,6 +41,7 @@ console.log(text);                  //100
 <br>
 <br>
 
+
 #### 解释型语言
 
 <strong>为什么说是 '解释型语言'</strong>
@@ -48,6 +49,14 @@ console.log(text);                  //100
 <br>**解释型语言：相对于编译型语言存在。该类语言不需要编译，执行的时候由解释器直接翻译并且运行。**（多平台兼容性好）
 
 `虽然说编译型语言的运行效率高，性能好。但是由于现在浏览器厂商愿意花成本来优化解释器，所以 `javascript` 的运行效率，性能方面也会越来越好。`
+
+<br>
+<br>
+
+#### 脚本语言
+
+<strong>什么是 '脚本语言'</strong>
+>不需要编译的语言。
 
 <br>
 <br>
@@ -248,6 +257,4 @@ target.change();                    //target.change is not a function
 * `Uncaught ReferenceError`-引用错误
 * `RangeError`-范围错误
 * `TypeError`-类型错误
-
-
 
