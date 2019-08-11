@@ -140,13 +140,13 @@ Javascript 是**单线程的**，所以意味着所有的任务都需要排队�
 #### async和defer
 
 `<script src="js.js"></script>`：<br>
-没有 `async` 和 `defer` 属性的 `script` 标签，浏览器会按标签所在的位置立即加载并立即执行，在渲染 `dom` 元素。
+没有 `async` 和 `defer` 属性的 `script` 标签，浏览器会按标签所在的位置立即加载并立即执行，在渲染 `dom` 元素。<br><br>
 
 `<script src="js.js" async="async"></script>`：<br>
-有 `async` 属性的 `script` 标签为异步下载后执行，元素被渲染的同时，`js` 会被异步下载，`js` 下载之后执行，元素会停止渲染，等待 `js` 执行之后再继续渲染。
+有 `async` 属性的 `script` 标签为异步下载后执行，元素被渲染的同时，`js` 会被异步下载，`js` 下载之后执行，元素会停止渲染，等待 `js` 执行之后再继续渲染。<br><br>
 
 `<script src="js.js" defer="defer"></script>`：<br>
-有 `defer` 属性的 `script` 标签为异步下载后延迟执行，素被渲染的同时，`js` 会被异步下载，`js` 会在元素被解析之后执行。
+有 `defer` 属性的 `script` 标签为异步下载后延迟执行，素被渲染的同时，`js` 会被异步下载，`js` 会在元素被解析之后执行。<br><br>
 
 
 >`async` 和 `defer` 一样都是外部引入，并且异步加载的方式，不同的是， `async` 是加载完之后直接执行，`defer` 是元素解析之后执行。从实用的角度来说，我们一般都会写在 `</body>` 标签前面。
