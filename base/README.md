@@ -314,6 +314,10 @@ target.change();                    //target.change is not a function
 <br>
 
 #### 总结
+
+
+`Javascript` 是可以随时改变变量的数据类型，所以它是弱类型语言，因为它在执行的时候才知道它的数据类型，所以它是动态类型语言。它不需要编译就可以直接在浏览器跑起来，所以是脚本语言，解释型语言，跨平台语言；它是单线程的，所有的任务都必须排队执行；
+
 * `动态类型语言`：Javascript 是一种动态类型语言，需要在运行时才能确定变量的数据类型；<br>
 * `弱类型语言`：Javascript 是一种弱类型语言，它可以随时改变变量的数据类型；<br>
 * `解释型语言`：Javascript 是一种解释型语言，浏览器 js 引擎翻译就可以运行；<br>
@@ -325,7 +329,7 @@ target.change();                    //target.change is not a function
 <br>
 
 熟悉常见的错误提示可以让我们更加快速的定位问题。
-* `SyntaxError`-语法规则错误
+* `SyntaxError`-语法规则错误（导致整段 `Javascript` 不能执行）
 * `Uncaught ReferenceError`-引用错误
 * `RangeError`-范围错误
 * `TypeError`-类型错误

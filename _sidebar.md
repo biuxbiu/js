@@ -29,6 +29,7 @@
         * [-- 八进制](dataType/#八进制)
         * [-- 特殊值](dataType/#特殊值)
     * [-- 字符串型](dataType/#字符串-string)
+    * [-- 总结](dataType/#总结)
 * [运算符 ](variable/#运算符)
     * [-- 算数运算符](operators/#算数运算符)
     * [-- 比较运算符](operators/#比较运算符)
