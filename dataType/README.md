@@ -94,14 +94,56 @@ console.log(a.name)         //ken
 <br>
 <br>
 
+**两个简单（基本）数据类型的比较实质是两个值的比较：**
+
+```copy
+var a = 1;
+var b = a;
+
+console.log(a === b);           //true
+```
+
+<br>
+<br>
+
 **复杂（引用）数据类型在堆中的表现：**
 
 堆：数据大小不确定，按引用存放。
 <img src="../img/dui.jpg">
 >复杂（引用）数据类型是按引用访问的。每个变量的值都是一个 `url 指针`，他们指向堆中同一个值。当这个值发生改变的时候，所有指向这个堆的变量也会发生改变。
+
 !>换句话说，你也可以说他们是拷贝，但是拷贝的是同一个 `url 指针`，`url 指针` 指向同一个堆地址的值。
 
+<br>
+<br>
 
+**两个复杂（引用）数据类型的比较实质是两个指针地址的比较，只要 `url 指针` 指向一致，他们相比较就为 `true`，反正为 `false`**
+
+<br>
+<br>
+
+* url 指针指向一致
+
+```copy
+var a = {name:'peter',age:12};
+var b = a;                                  //url 指针指向一致
+
+console.log(a === b);                       //true
+console.log(a == b);                        //true
+```
+
+<br>
+<br>
+
+* url 指针指向不一致
+
+```copy
+var a = {name:'peter',age:12};              
+var b = {name:'peter',age:12};             //值是一样的
+
+console.log(a === b);                      //false
+console.log(a == b);                       //false
+```
 <br>
 <br>
 
