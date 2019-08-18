@@ -58,9 +58,28 @@ var a = b = c = d = 0;          //`a` 是局部变量，`b` `c` `d` 是全局变
 <br>
 <br>
 
+
+<strong> 举个例子：</strong><br>
+
+```copy
+var x = 10;          //作用域使得 `x` 是个全局变量；
+y = 20;              //定义来全局变量；
+
+window.x = 10;
+window.y = 20;          
+
+delete window.x;        //false
+delete window.y;        //true
+```
+
+<br>
+<br>
+
+
 **为什么 `var` 的变量不能删除？**
 
-因为每个变量都有一个隐形的 `configurable` 属性。只要 `configurable` 的属性为 `false` 的时候，就不能被删除。
+因为每个变量都有一个隐形的 `configurable` 属性。<br>
+当 `configurable` 的属性为 `false` 的时候，就不能被删除。
 
 
 <br>
@@ -72,11 +91,12 @@ var a = b = c = d = 0;          //`a` 是局部变量，`b` `c` `d` 是全局变
 var a = 10;
 Object.getOwnPropertyDescriptor(window,'a');
 
-//{
-value: 10, 
-writable: true, 
-enumerable: true, 
-configurable: false                 //这个值为 `false` 因此不能删除
+//打印信息如下
+{
+    value: 10, 
+    writable: true, 
+    enumerable: true, 
+    configurable: false                 //这个值为 `false` 因此不能删除
 }
 ```
 
@@ -91,28 +111,13 @@ configurable: false                 //这个值为 `false` 因此不能删除
 b = 10;
 Object.getOwnPropertyDescriptor(window,'b');
 
-//{
-value: 10, 
-writable: true, 
-enumerable: true, 
-configurable: true                 //这个值为 `true` 因此可以删除
+//打印信息如下
+{
+    value: 10, 
+    writable: true, 
+    enumerable: true, 
+    configurable: true                 //这个值为 `true` 因此可以删除
 }
-```
-
-<br>
-<br>
-
-<strong> 举个例子：</strong><br>
-
-```copy
-var x = 10;          //作用域使得 `x` 是个全局变量；
-y = 20;              //定义来全局变量；
-
-window.x = 10;
-window.y = 20;          
-
-delete window.x;        //false
-delete window.y;        //true
 ```
 
 <br>
