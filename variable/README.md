@@ -48,9 +48,12 @@ var a = b = c = d = 0;          //`a` 是局部变量，`b` `c` `d` 是全局变
 
 
 #### 删除变量
+变量可以声明，也可以删除。
 用 `delete` 方法可以删除变量。
-变量可以声明，也可以删除。<br>
-删除变量要遵循以下几点：
+
+<br>
+
+**删除变量要注意以下两点：**
 * 所有 `var` 声明的变量都不可以删除（哪怕 `var` 的是全局变量）。
 * 没有 `var` 声明的变量都可以删除。
 
@@ -78,14 +81,20 @@ delete window.y;        //true
 
 **为什么 `var` 的变量不能删除？**
 
-因为每个变量都有一个隐形的 `configurable` 属性。<br>
+因为每个 `var` 变量都有一个隐形的 `configurable` 属性。<br>
 当 `configurable` 的属性为 `false` 的时候，就不能被删除。
 
+这里涉及到一个知识点和方法：
+
+```copy
+Object.getOwnPropertyDescriptor();
+```
+
 
 <br>
 <br>
 
-`var` 的变量不可删除
+**有 `var` 的变量不可删除**
 
 ```copy
 var a = 10;
@@ -103,7 +112,7 @@ Object.getOwnPropertyDescriptor(window,'a');
 <br>
 <br>
 
-没有 `var` 的变量可删除
+**没有 `var` 的变量可删除**
 
 * configurable: true -- 可以修改
 
