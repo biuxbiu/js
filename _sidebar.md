@@ -78,6 +78,14 @@
     * [-- 表格验证](dom/#表格验证)
 
 
+<div class="MoreWay">Chrome and NetWork</div>
+
+<a class="developerLogo" href="http://chrome.biuxbiu.design/" target="_blank"><img src="img/chrome.jpg"></a>
+
+
+<div class="MoreWay">Git Commond</div>
+
+<a class="developerLogo" href="http://git.biuxbiu.design/" target="_blank"><img src="img/git.jpg"></a>
 
 <div class="MoreWay">biuxbiu Javascript Series</div>
 
