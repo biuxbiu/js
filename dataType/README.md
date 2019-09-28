@@ -294,7 +294,37 @@ var name = 'He is \'peter\''        //He is 'peter'
 |\b|推格符|
 |\b|换页符|
 
-#### 布尔 boolean
+#### 为定义-undefined
+
+`undefined` 的值只有一个，就是 `undefined`。
+`undefined` 指的是变量只声明没有赋值：
+
+```copy
+undefined == undefined;            //`true`
+undefined === undefined;           //`true` 
+```
+
+```copy
+var people;
+console.log(people == undefined);         //true
+```
+
+!>使用 `typeof` 对已经声明未赋值或者未声明的变量，返回结果都是 `undefined`;
+
+```copy
+var people;
+typeof people;
+typeof man;
+```
+
+#### null类型
+
+`null` 表示空。 
+
+>`null` 表示一个空对象指针。而这个也正是为什么使用 `typeof` 检测 `null` 的时候会返回 `object` 的原因。<Br>如果定义的变量准备在将来用来保存对象，那么可以使用 `null` 来初始化。
+
+
+#### 布尔-boolean
 布尔类型只能有两个值，`true` 和 `false`。
 ```copy
 var x = true;
