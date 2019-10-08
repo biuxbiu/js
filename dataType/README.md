@@ -294,7 +294,7 @@ var name = 'He is \'peter\''        //He is 'peter'
 |\b|推格符|
 |\b|换页符|
 
-#### 为定义-undefined
+#### 未定义类型-undefined
 
 `undefined` 的值只有一个，就是 `undefined`。
 `undefined` 指的是变量只声明没有赋值：
@@ -309,19 +309,70 @@ var people;
 console.log(people == undefined);         //true
 ```
 
-!>使用 `typeof` 对已经声明未赋值或者未声明的变量，返回结果都是 `undefined`;
+<Br>
+
+!>使用 `typeof` 对 `已经声明未赋值` 或者 `未声明` 的变量，返回结果都是 `undefined`;
 
 ```copy
 var people;
-typeof people;
-typeof man;
+typeof people;              //'undefined'
+typeof man;                 //'undefined';
+                            //typeof 是类型判断，对于 `已经声明未赋值` 或者 `未声明` 的变量，返回结果都是 `undefined`
+```
+
+<Br>
+
+
+!>`undefiend` 在数据运算过程中，会转换成 `NaN`，此处所说的运算指的是和数字之间的加减乘除，而且要注意运算顺序。不一样的运算顺序会导致不一样的结果；
+
+```copy
+1 + undefined;                  //NaN
+1 + undefined + '';             //'NaN'
+1 + '' + undefined;             //'undefined'
 ```
 
 #### null类型
 
 `null` 表示空。 
 
->`null` 表示一个空对象指针。而这个也正是为什么使用 `typeof` 检测 `null` 的时候会返回 `object` 的原因。<Br>如果定义的变量准备在将来用来保存对象，那么可以使用 `null` 来初始化。
+>`null` 表示一个空对象指针。而这个也正是为什么使用 `typeof` 检测 `null` 的时候会返回 `object` 的原因。<br>
+如果定义的变量准备在将来用来保存对象，那么可以使用 `null` 来初始化。<br>
+虽然说 `null` 表示一个空对象。 
+
+<br>
+<br>
+
+我们来比较一下以下的情况：
+
+```copy
+var peopleOne = {};                         //变量的值为一个空对象
+var peopleTwo = null;                       //变量的值为 'null'
+
+typeof(peopleOne);                          //'object' ，{} 是一个 object
+typeof(peopleTwo);                          //'object' ，null 表示一个对象指针，所以是一个 object
+
+peopleOne.name = 'peter';                   //对象可以设置 'name' 属性
+peopleTwo.name = 'peter';                   //报错 Cannot set property 'name' of null；
+                                            //当变量设置为 'null' 时不能添加属性；
+
+```
+
+<br>
+
+!>注意以下特点：
+
+```copy
+null == undefined           //true
+                            //值相同，都为 '空';
+
+null !== undefined          //true
+                            //很好理解，类型不一样，所以返回 `false` ；
+```
+
+`null` 表示空的对象指针，所以它的值为空；<br>
+`undefined` 表示值未定义，所以它的值为空；<br>
+`==` 是值的比较；<br>
+`===` 是值和类型的比较；
 
 
 #### 布尔-boolean
