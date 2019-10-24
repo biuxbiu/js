@@ -10,6 +10,8 @@ Javascript 中的数据类型大致分为以下几种：
 `string` 、 `array`  、 `boolean`  、 `undefined`  、 `number` 、 `null` 、 `object` 
 
 
+
+
 <br>
 <br>
 
